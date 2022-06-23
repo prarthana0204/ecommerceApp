@@ -84,6 +84,7 @@ public class HomeFragment extends Fragment {
         popularRecyclerview=root.findViewById(R.id.popular_rec);
         catShowAll=root.findViewById(R.id.category_see_all);
         popularShowAll=root.findViewById(R.id.popular_see_all);
+
         newProductShowAll=root.findViewById(R.id.newProducts_see_all);
         catShowAll.setOnClickListener(new View.OnClickListener() {
             @Override

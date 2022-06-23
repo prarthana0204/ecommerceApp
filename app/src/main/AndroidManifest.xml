@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Ecommerce"
         tools:replace="allowBackup ,label">
         <activity
-            android:name=".ShowAllActivity"
+            android:name=".activities.ShowAllActivity"
             android:exported="false" />
         <activity
             android:name=".activities.DetailedActivity"
