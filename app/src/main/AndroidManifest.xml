@@ -14,11 +14,14 @@
         android:theme="@style/Theme.Ecommerce"
         tools:replace="allowBackup ,label">
         <activity
+            android:name=".ShowAllActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.DetailedActivity"
             android:exported="false" />
         <activity
             android:name=".activities.OnBoardActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activities.RegistrationActivity"
             android:exported="true">

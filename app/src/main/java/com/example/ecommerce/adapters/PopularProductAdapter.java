@@ -1,6 +1,8 @@
 package com.example.ecommerce.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.ecommerce.R;
+import com.example.ecommerce.activities.DetailedActivity;
 import com.example.ecommerce.models.PopularProductsModel;
 
 import java.util.List;
@@ -32,10 +35,18 @@ public class PopularProductAdapter  extends RecyclerView.Adapter<PopularProductA
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Glide.with(context).load(popularProductsModelsList.get(position).getImg_url()).into(holder.imageView);
         holder.name.setText(popularProductsModelsList.get(position).getName());
         holder.price.setText(String.valueOf(popularProductsModelsList.get(position).getPrice()));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, DetailedActivity.class);
+                intent.putExtra("detailed",popularProductsModelsList.get(position));
+                context.startActivity(intent);
+            }
+        });
 
     }
 
