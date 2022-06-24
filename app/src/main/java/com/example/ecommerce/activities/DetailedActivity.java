@@ -2,6 +2,7 @@ package com.example.ecommerce.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,7 @@ public class DetailedActivity extends AppCompatActivity {
     TextView rating,name,description,price,quantity;
     Button addToCart,buyNow;
     ImageView addItems,removeItems;
+    Toolbar toolbar;
     int totalQuantiy=1;
     int totalPrice=0;
     //New Products
@@ -46,6 +48,11 @@ public class DetailedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed);
+        toolbar=findViewById(R.id.detailed_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         firestore=FirebaseFirestore.getInstance();
         auth=FirebaseAuth.getInstance();
         final Object obj=getIntent().getSerializableExtra("detailed");

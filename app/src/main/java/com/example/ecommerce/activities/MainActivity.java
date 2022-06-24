@@ -58,8 +58,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this,RegistrationActivity.class));
             finish();
 
-        }else if(id==R.id.menu_my_cart){
+        }
+        else if(id==R.id.menu_my_cart){
             startActivity(new Intent(MainActivity.this,CartActivity.class));
+
         }
         return true;
     }
