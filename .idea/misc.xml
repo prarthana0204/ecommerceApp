@@ -6,6 +6,8 @@
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/drawable/edit_text_bg.xml" value="0.2495" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2495" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/drawable/mycart.xml" value="0.178" />
+        <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/activity_add_address.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/activity_address.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/activity_cart.xml" value="0.2" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/activity_detailed.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/activity_login.xml" value="0.24818840579710144" />
@@ -13,6 +15,7 @@
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/activity_on_board.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/activity_registration.xml" value="0.24818840579710144" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/activity_show_all.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/address_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/category_list.xml" value="0.2" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/fragment_home.xml" value="0.19343065693430658" />
         <entry key="..\:/Users/pmg44/AndroidStudioProjects/ecommerce2/app/src/main/res/layout/my_cart_item.xml" value="0.17760416666666667" />
