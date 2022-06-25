@@ -14,7 +14,10 @@
         android:theme="@style/Theme.Ecommerce"
         tools:replace="allowBackup ,label">
         <activity
-            android:name=".AddAddressActivity"
+            android:name=".activities.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddAddressActivity"
             android:exported="false" />
         <activity
             android:name=".activities.AddressActivity"
@@ -56,6 +59,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_uOxg4yJ3qDPGYf"/>
     </application>
 
 </manifest>

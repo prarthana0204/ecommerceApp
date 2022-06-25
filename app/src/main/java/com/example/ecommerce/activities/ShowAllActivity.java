@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.ecommerce.R;
 import com.example.ecommerce.adapters.ShowAllAdapter;
@@ -35,6 +36,13 @@ public class ShowAllActivity extends AppCompatActivity {
         toolbar=findViewById(R.id.show_all_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         String type=getIntent().getStringExtra("type");
         firestore=FirebaseFirestore.getInstance();
