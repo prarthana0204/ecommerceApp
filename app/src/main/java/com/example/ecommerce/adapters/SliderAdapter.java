@@ -32,9 +32,9 @@ public class SliderAdapter extends PagerAdapter {
             R.string.third_slide
     };
     int descriptionArray[]={
-            R.string.description,
-            R.string.description,
-            R.string.description
+            R.string.description1,
+            R.string.description2,
+            R.string.description3
     };
 
 
