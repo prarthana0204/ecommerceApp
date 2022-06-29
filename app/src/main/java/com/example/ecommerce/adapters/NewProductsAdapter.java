@@ -46,8 +46,6 @@ public class NewProductsAdapter extends RecyclerView.Adapter<NewProductsAdapter.
                 Intent intent=new Intent(context,DetailedActivity.class);
                 intent.putExtra("detailed",list.get(position));
                 context.startActivity(intent);
-
-
             }
         });
 
@@ -67,8 +65,6 @@ public class NewProductsAdapter extends RecyclerView.Adapter<NewProductsAdapter.
            newImg=itemView.findViewById(R.id.new_img);
            newName=itemView.findViewById(R.id.new_product_name);
            newPrice=itemView.findViewById(R.id.new_price);
-
-
         }
     }
 }

@@ -32,8 +32,6 @@ public class OnBoardActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_on_board);
         //hide toolbar
-        getSupportActionBar().hide();
-
         btn=findViewById(R.id.get_started_btn);
         viewPager=findViewById(R.id.slider);
         dotsLayout=findViewById(R.id.dots);

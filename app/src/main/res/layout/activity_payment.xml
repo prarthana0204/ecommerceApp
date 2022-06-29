@@ -18,17 +18,16 @@
         app:title="Payment Details"/>
 
 
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="340dp"
         android:layout_height="244dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/payment_toolbar"
-        app:srcCompat="@drawable/card_prev" />
+        app:srcCompat="@drawable/pay" />
 
     <TextView
         android:id="@+id/textView12"

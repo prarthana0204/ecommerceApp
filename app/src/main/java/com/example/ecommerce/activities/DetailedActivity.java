@@ -126,11 +126,11 @@ public class DetailedActivity extends AppCompatActivity {
                 if(newProductsModel !=null){
                     intent.putExtra("item",newProductsModel);
                 }
-                if(showAllModel!=null){
+                if(popularProductsModel!=null){
                     intent.putExtra("item",popularProductsModel);
 
                 }
-                if(popularProductsModel!=null){
+                if(showAllModel!=null){
                     intent.putExtra("item",showAllModel);
 
                 }

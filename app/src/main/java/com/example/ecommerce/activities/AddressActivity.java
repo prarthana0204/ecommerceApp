@@ -102,7 +102,6 @@ public class AddressActivity extends AppCompatActivity implements AddressAdapter
                 if(obj instanceof ShowAllModel){
                     ShowAllModel showAllModel=(ShowAllModel) obj;
                     amount=showAllModel.getPrice();
-
                 }
                 Intent intent=new Intent(AddressActivity.this,PaymentActivity.class);
                 intent.putExtra("amount",amount);

@@ -121,7 +121,7 @@
         android:layout_marginTop="548dp"
         android:layout_marginEnd="34dp"
         android:layout_marginBottom="156dp"
-        android:onClick="signin"
+        android:onClick="signUp"
         android:text="Sign Up"
         android:textColor="@color/pink"
         android:textSize="19sp"
