@@ -109,10 +109,6 @@ public class AddressActivity extends AppCompatActivity implements AddressAdapter
 
             }
         });
-
-
-
-
         addAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
