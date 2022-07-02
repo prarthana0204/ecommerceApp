@@ -41,6 +41,7 @@ public class CartActivity extends AppCompatActivity {
     private FirebaseFirestore firestore;
     Button buyNow;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +63,7 @@ public class CartActivity extends AppCompatActivity {
         LocalBroadcastManager.getInstance(this)
                 .registerReceiver(mMessageReceiver,new IntentFilter("MyTotalAmount"));
 
-        buyNow=(Button)findViewById(R.id.pay_btn);
+        buyNow=(Button)findViewById(R.id.buy_now);
         overAllAmount=findViewById(R.id.textView3);
         recyclerView=findViewById(R.id.cart_rec);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -84,17 +85,21 @@ public class CartActivity extends AppCompatActivity {
                         }
                     }
                 });
-
     }
     public BroadcastReceiver mMessageReceiver=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             int totalBill=intent.getIntExtra("totalAmount",0);
             overAllAmount.setText("Total Amount : ₹"+totalBill);
-
-
+            buyNow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String amountCart=String.valueOf(totalBill);
+                    Intent intent1=new Intent(CartActivity.this,PaymentCart.class);
+                    intent1.putExtra("Cart",amountCart);
+                    startActivity(intent1);
+                }
+            });
         }
     };
-
-
 }
