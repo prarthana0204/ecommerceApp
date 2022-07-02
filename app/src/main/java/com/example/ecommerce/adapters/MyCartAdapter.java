@@ -39,7 +39,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
         holder.time.setText(list.get(position).getCurrentTime());
         holder.price.setText("₹"+list.get(position).getProductPrice());
         holder.name.setText(list.get(position).getProductName());
-        holder.totalPrice.setText(String.valueOf(list.get(position).getTotalPrice()));
+        holder.totalPrice.setText("₹"+String.valueOf(list.get(position).getTotalPrice()));
         holder.totalQuantity.setText(list.get(position).getTotalQuantity());
 
         //Total Amount passed to Cart Activity

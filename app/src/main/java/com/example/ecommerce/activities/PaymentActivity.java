@@ -1,5 +1,8 @@
 package com.example.ecommerce.activities;
 
+import static java.lang.Integer.parseInt;
+import static java.lang.String.valueOf;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -23,6 +26,8 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
     Toolbar toolbar;
     TextView subTotal,discount,shipping,total;
     Button paymentBtn;
+    double discountPrice=0;
+    double totalAmount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,12 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
         total=findViewById(R.id.total_amt);
         paymentBtn=findViewById(R.id.pay_btn);
         subTotal.setText("₹"+amount);
+        discountPrice = (double) ((amount/100)*5);
+        discount.setText("₹"+String.valueOf(discountPrice));
+        double shippingPrice=150;
+        shipping.setText("₹"+String.valueOf(shippingPrice));
+        totalAmount= (double) (amount-discountPrice+shippingPrice);
+        total.setText("₹"+totalAmount);
         paymentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,14 +81,14 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
             options.put("currency", "INR");
             //double total = Double.parseDouble(mAmountText.getText().toString());
             //multiply with 100 to get exact amount in rupee
-            amount = amount * 100;
+             totalAmount=totalAmount*100;
             //amount
-            options.put("amount", amount);
+            options.put("amount", totalAmount);
             JSONObject preFill = new JSONObject();
             //email
-            preFill.put("email", "developer.kharag@gmail.com");
+            preFill.put("email", "prarthamanavi@gmail.com");
             //contact
-            preFill.put("contact", "7489347378");
+            preFill.put("contact", "7676466127");
 
             options.put("prefill", preFill);
 

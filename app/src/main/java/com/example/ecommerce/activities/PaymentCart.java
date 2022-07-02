@@ -17,7 +17,7 @@ import com.razorpay.Checkout;
 import org.json.JSONObject;
 
 public class PaymentCart extends AppCompatActivity {
-    double amount=0.0;
+    double amount;
     Toolbar toolbar;
     TextView subTotal,discount,shipping,total;
     Button paymentBtn;
@@ -36,13 +36,14 @@ public class PaymentCart extends AppCompatActivity {
                 finish();
             }
         });
-        amount=getIntent().getDoubleExtra("Cart",0.0);
+
         subTotal=findViewById(R.id.sub_total);
         discount=findViewById(R.id.textView17);
         shipping=findViewById(R.id.textView18);
         total=findViewById(R.id.total_amt);
         paymentBtn=findViewById(R.id.pay_btn);
-        subTotal.setText("₹"+amount);
+        amount=getIntent().getIntExtra("Cart",0);
+        subTotal.setText("₹"+String.valueOf(amount));
         paymentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

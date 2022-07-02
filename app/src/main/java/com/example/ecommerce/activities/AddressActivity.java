@@ -91,17 +91,16 @@ public class AddressActivity extends AppCompatActivity implements AddressAdapter
                 double amount=0.0;
                 if(obj instanceof NewProductsModel){
                     NewProductsModel newProductsModel=(NewProductsModel) obj;
-                    amount=newProductsModel.getPrice();
+                    amount=getIntent().getIntExtra("totalAmount",0);
 
                 }
                 if(obj instanceof PopularProductsModel){
                     PopularProductsModel popularProductsModel=(PopularProductsModel) obj;
-                    amount=popularProductsModel.getPrice();
-
+                    amount=getIntent().getIntExtra("totalAmount",0);
                 }
                 if(obj instanceof ShowAllModel){
                     ShowAllModel showAllModel=(ShowAllModel) obj;
-                    amount=showAllModel.getPrice();
+                    amount=getIntent().getIntExtra("totalAmount",0);
                 }
                 Intent intent=new Intent(AddressActivity.this,PaymentActivity.class);
                 intent.putExtra("amount",amount);

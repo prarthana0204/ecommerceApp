@@ -127,13 +127,16 @@ public class DetailedActivity extends AppCompatActivity {
                 Intent intent=new Intent(DetailedActivity.this,AddressActivity.class);
                 if(newProductsModel !=null){
                     intent.putExtra("item",newProductsModel);
+                    intent.putExtra("totalAmount",totalPrice);
                 }
                 if(popularProductsModel!=null){
                     intent.putExtra("item",popularProductsModel);
+                    intent.putExtra("totalAmount",totalPrice);
 
                 }
                 if(showAllModel!=null){
                     intent.putExtra("item",showAllModel);
+                    intent.putExtra("totalAmount",totalPrice);
 
                 }
                 startActivity(intent);

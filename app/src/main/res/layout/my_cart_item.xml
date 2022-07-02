@@ -143,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/amethysta"
-                android:text="Total price "
+                android:text="₹Total price "
                 android:textSize="16sp"
                 android:textStyle="bold" />
 

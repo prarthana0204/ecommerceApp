@@ -27,7 +27,7 @@
         android:fontFamily="@font/amethysta"
         android:gravity="center"
         android:padding="18dp"
-        android:text="Total Price:₹0"
+        android:text="Total Amount: ₹0"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,19 +49,5 @@
         app:layout_constraintTop_toTopOf="@+id/textView3"
         app:layout_constraintWidth_percent=".9"
         tools:listitem="@layout/my_cart_item"/>
-    <Button
-        android:id="@+id/buy_now"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
-        android:drawableTint="@color/white"
-        android:padding="14dp"
-        android:text="Buy Now"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent=".9"
-        android:backgroundTint="@color/blue"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
