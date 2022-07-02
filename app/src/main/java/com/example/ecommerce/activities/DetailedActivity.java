@@ -35,6 +35,8 @@ public class DetailedActivity extends AppCompatActivity {
     Toolbar toolbar;
     int totalQuantiy=1;
     int totalPrice=0;
+    int total=1;
+    int fi=1;
     //New Products
     NewProductsModel newProductsModel=null;
     //Popular Products
@@ -67,7 +69,6 @@ public class DetailedActivity extends AppCompatActivity {
 
         if(obj instanceof NewProductsModel){
             newProductsModel=(NewProductsModel) obj;
-
         }
         else if(obj instanceof PopularProductsModel){
             popularProductsModel=(PopularProductsModel) obj;
@@ -91,9 +92,9 @@ public class DetailedActivity extends AppCompatActivity {
             name.setText(newProductsModel.getName());
             rating.setText(newProductsModel.getRating());
             description.setText(newProductsModel.getDescription());
+            totalPrice=newProductsModel.getPrice() * totalQuantiy;
             price.setText(String.valueOf(newProductsModel.getPrice()));
             name.setText(newProductsModel.getName());
-            totalPrice=newProductsModel.getPrice() * totalQuantiy;
         }
 
         //Popular Products
@@ -102,9 +103,10 @@ public class DetailedActivity extends AppCompatActivity {
             name.setText(popularProductsModel.getName());
             rating.setText(popularProductsModel.getRating());
             description.setText(popularProductsModel.getDescription());
+            totalPrice=popularProductsModel.getPrice() * totalQuantiy;
             price.setText(String.valueOf(popularProductsModel.getPrice()));
             name.setText(popularProductsModel.getName());
-            totalPrice=popularProductsModel.getPrice() * totalQuantiy;
+
         }
 
         //Show All Products

@@ -9,14 +9,15 @@
 
     <ImageView
         android:id="@+id/detailed_img"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="413dp"
+        android:layout_height="216dp"
+
         android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        ></ImageView>
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/detailed_toolbar"
@@ -27,6 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Product Details" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
         android:layout_width="match_parent"
@@ -38,8 +40,10 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.688">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,7 +63,7 @@
                     android:fontFamily="@font/amethysta"
                     android:text="Product Name"
                     android:textColor="@color/black"
-                    android:textSize="25dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -91,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/amethysta"
-                android:text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " />
+                android:text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  " />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -161,22 +165,24 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <Button
-        android:backgroundTint="@color/pink"
-        app:layout_constraintWidth_percent=".8"
         android:id="@+id/add_to_cart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink"
+        android:drawableLeft="@drawable/mycart"
+        android:drawableTint="@color/white"
+        android:padding="14dp"
         android:text="Add to cart"
+        android:textAllCaps="false"
+        app:flow_verticalBias="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardview"
-        android:textAllCaps="false"
-        android:drawableLeft="@drawable/mycart"
-        android:drawableTint="@color/white"
-        android:padding="14dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:flow_verticalBias="1"/>
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent=".8" />
 
     <Button
         android:id="@+id/buy_now"

@@ -23,7 +23,6 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
     Toolbar toolbar;
     TextView subTotal,discount,shipping,total;
     Button paymentBtn;
-    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

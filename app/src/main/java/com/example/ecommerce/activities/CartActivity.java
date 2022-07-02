@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ecommerce.R;
@@ -38,11 +39,13 @@ public class CartActivity extends AppCompatActivity {
     MyCartAdapter cartAdapter;
     private FirebaseAuth auth;
     private FirebaseFirestore firestore;
+    Button buyNow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+
         auth=FirebaseAuth.getInstance();
         firestore=FirebaseFirestore.getInstance();
         toolbar=findViewById(R.id.my_cart_toolbar);
@@ -59,7 +62,7 @@ public class CartActivity extends AppCompatActivity {
         LocalBroadcastManager.getInstance(this)
                 .registerReceiver(mMessageReceiver,new IntentFilter("MyTotalAmount"));
 
-
+        buyNow=(Button)findViewById(R.id.pay_btn);
         overAllAmount=findViewById(R.id.textView3);
         recyclerView=findViewById(R.id.cart_rec);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -81,6 +84,7 @@ public class CartActivity extends AppCompatActivity {
                         }
                     }
                 });
+
     }
     public BroadcastReceiver mMessageReceiver=new BroadcastReceiver() {
         @Override
@@ -91,5 +95,6 @@ public class CartActivity extends AppCompatActivity {
 
         }
     };
+
 
 }
